@@ -38,4 +38,4 @@ io.on('connection', (socket) => {
     })
 })
 
-server.listen(port, () => console.log(`servidor rodando na porta: ${port}`));
+server.listen(port, () => console.log(`servidor rodando na porta: ${port}`))
