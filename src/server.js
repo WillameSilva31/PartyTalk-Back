@@ -21,7 +21,8 @@ app.get("/", (req,res)=> res.json("hello world"));
 
 io.on('connection', (socket) => {
     socket.on("disconnect", () => {
-        console.log(`socket desconectado: ${socket.id}`)
+        console.log(`socket desconectado: ${socket.id}`);
+        io.emit("message",{ name: null, message:`alguém saiu da party ;-;`});
     })
     socket.on("join", (name) => {
         const user = { id: socket.id, name };
